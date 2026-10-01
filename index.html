@@ -3,18 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/nav.css">
     <title>Meu Portifólio</title>
 </head>
 <body>
-    <nav class="navbar">
-        <img src="" alt="logo" class="logo">
-        <a href="#home">Home</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#contato">Contato</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#skills">Skills</a>
-    </nav>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#home" class="logo">
+                <img src="" alt="logo">
+            </a>
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                </ul>
+                <!-- REDES SOCIAIS -->
+                <ul class="social-links">
+                    <li><a href="mailto:feliperobinsonprofissional@gmail.com" target="_blank" rel="noopener" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
+                    <li><a href="https://twitter.com/FelipeRobinson" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="https://linkedin.com/in/FelipeRobinson" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    <li><a href="https://github.com/FelipeRobinson" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
     <section id="home">
         <img src="" alt="">
@@ -48,5 +70,7 @@
     <footer>
         <p>&copy; 2026 Felipe Robinson. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>

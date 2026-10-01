@@ -1,21 +1,166 @@
+/* NAVBAR */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--primary-color);
+}
+
 .navbar {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 30px;
+    width: 100%;
+    padding: 15px 40px;
 }
 
-.logo {
+.logo img {
+    display: block;
     width: 120px;
+    height: auto;
 }
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #000;
+    color: var(--secondary-color);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: rgba(255, 0, 0, 0.5);
+}
+
+/* BOTÃO HAMBÚRGUER */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-color);
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Vira um "X" quando o menu está aberto */
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(9.5px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+}
+
+/* MENU (desktop: só os links, sem redes sociais) */
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.social-links {
+    display: none;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        position: relative;
+        z-index: 200; /* fica acima do menu aberto para virar o X */
+    }
+
+    /* Menu em tela cheia que desliza da esquerda para a direita */
+    .nav-menu {
+        position: fixed;
+        inset: 0;
+        z-index: 150;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 100px 20px 40px;
+        background-color: var(--primary-color);
+        transform: translateX(-100%);
+        visibility: hidden;
+        transition: transform 0.4s ease, visibility 0.4s;
+    }
+
+    .nav-menu.active {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 12px;
+        font-size: 1.5rem;
+    }
+
+    /* Redes sociais na parte de baixo do menu */
+    .social-links {
+        /* 4 ícones em cima e 4 embaixo */
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        justify-content: center;
+        gap: 20px 24px;
+        list-style: none;
+    }
+
+    .social-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        font-size: 1.4rem;
+        color: var(--text-color);
+        border: 1px solid var(--text-color);
+        border-radius: 50%;
+        text-decoration: none;
+        transition: color 0.2s, border-color 0.2s;
+    }
+
+    .social-links a:hover {
+        color: var(--secondary-color);
+        border-color: var(--secondary-color);
+    }
+}
+
+/* Impede a página de rolar com o menu aberto */
+body.menu-open {
+    overflow: hidden;
 }
