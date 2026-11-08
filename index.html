@@ -3,33 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Felipe Robinson — Desenvolvedor e estudante de Análise e Desenvolvimento de Sistemas na Fatec Campinas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/nav.css">
-    <title>Meu Portifólio</title>
+    <link rel="stylesheet" href="./css/footer.css">
+    <title>Felipe Robinson | Portfólio</title>
 </head>
 <body>
     <header class="header">
         <nav class="navbar">
-            <a href="#home" class="logo">
-                <img src="" alt="logo">
+            <a href="#home" class="logo" aria-label="Início">
+                <!-- Troque pelo seu logo: <img src="./img/logo.png" alt="Felipe Robinson"> -->
+                <span class="logo-text">FR<span class="accent">.</span></span>
             </a>
             <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
                     <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato" class="nav-cta">Contato</a></li>
                 </ul>
-                <!-- REDES SOCIAIS -->
                 <ul class="social-links">
-                    <li><a href="mailto:feliperobinsonprofissional@gmail.com" target="_blank" rel="noopener" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
+                    <li><a href="mailto:feliperobinsonprofissional@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
                     <li><a href="https://twitter.com/FelipeRobinson" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
                     <li><a href="https://linkedin.com/in/FelipeRobinson" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
                     <li><a href="https://github.com/FelipeRobinson" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
@@ -38,37 +41,234 @@
         </nav>
     </header>
 
-    <section id="home">
-        <img src="" alt="">
-        <h1>Felipe Robinson</h1>
-        <h2>Meu Portifólio</h2>
-        <h2>Desenvolvedor Web</h2>
-        <p>Olá! Sou Felipe Robinson, um desenvolvedor web apaixonado por criar experiências digitais incríveis.</p>
-    </section>
-    
-    <section id="sobre">
-        <h1>Sobre Mim</h1>
-        <p></p>
+    <main>
+        <!-- HERO -->
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-text reveal">
+                    <span class="badge"><span class="dot"></span> Disponível para estágio e projetos</span>
+                    <p class="mono">Olá, eu sou</p>
+                    <h1>Felipe Robinson<span class="accent">.</span></h1>
+                    <h2 class="typed">Desenvolvedor <span id="typed-word" class="accent">Full Stack</span><span class="cursor">|</span></h2>
+                    <p class="lead">Estudante de Análise e Desenvolvimento de Sistemas na <strong>Fatec Campinas</strong>. Transformo ideias em projetos reais — da interface web ao hardware IoT.</p>
+                    <div class="hero-actions">
+                        <a href="#projetos" class="btn btn-primary">Ver projetos <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" class="btn btn-ghost"><i class="fa-solid fa-download"></i> Baixar CV</a>
+                    </div>
+                    <ul class="hero-social">
+                        <li><a href="https://github.com/FelipeRobinson" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+                        <li><a href="https://linkedin.com/in/FelipeRobinson" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        <li><a href="mailto:feliperobinsonprofissional@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
+                    </ul>
+                </div>
 
-        <div>
-            <h1>Minha história</h1>
+                <div class="hero-photo reveal">
+                    <!-- FOTO PRINCIPAL: troque o placeholder por <img src="./img/perfil.jpg" alt="Felipe Robinson"> -->
+                    <div class="photo-frame">
+                        <div class="photo-placeholder">
+                            <i class="fa-regular fa-user"></i>
+                            <span>Sua foto aqui<br><small>retrato 4:5 · mín. 800×1000px</small></span>
+                        </div>
+                    </div>
+                    <div class="floating-card fc-1"><i class="fa-solid fa-code"></i> Web &amp; Full Stack</div>
+                    <div class="floating-card fc-2"><i class="fa-solid fa-microchip"></i> IoT &amp; IA</div>
+                </div>
+            </div>
+            <a href="#sobre" class="scroll-down" aria-label="Rolar para baixo"><i class="fa-solid fa-chevron-down"></i></a>
+        </section>
+
+        <!-- NÚMEROS / INSIGHTS RÁPIDOS -->
+        <section class="stats">
+            <div class="container stats-grid">
+                <div class="stat reveal"><strong data-count="4">0</strong><span>Projetos em destaque</span></div>
+                <div class="stat reveal"><strong data-count="15">0</strong><span>Tecnologias</span></div>
+                <div class="stat reveal"><strong data-count="4">0</strong><span>Áreas de estudo</span></div>
+                <div class="stat reveal"><strong>∞</strong><span>Vontade de aprender</span></div>
+            </div>
+        </section>
+
+        <!-- SOBRE -->
+        <section id="sobre" class="section">
+            <div class="container">
+                <header class="section-head reveal">
+                    <span class="mono">01 / sobre</span>
+                    <h2>Sobre mim</h2>
+                </header>
+
+                <div class="about-grid">
+                    <div class="about-photos reveal">
+                        <!-- FOTOS SECUNDÁRIAS: ex. você estudando, num evento, montando um circuito -->
+                        <div class="photo-placeholder tall"><i class="fa-regular fa-image"></i><span>Foto 1<br><small>você trabalhando</small></span></div>
+                        <div class="photo-placeholder"><i class="fa-regular fa-image"></i><span>Foto 2<br><small>evento / faculdade</small></span></div>
+                        <div class="photo-placeholder"><i class="fa-regular fa-image"></i><span>Foto 3<br><small>setup / hardware</small></span></div>
+                    </div>
+
+                    <div class="about-text reveal">
+                        <p class="lead">Aprendo construindo. Gosto de entender <strong>como os sistemas funcionam</strong> por dentro — e de transformar isso em soluções que resolvem problemas reais.</p>
+                        <p>Sou estudante de ADS na Fatec Campinas e meus interesses vão do desenvolvimento de software e bancos de dados até cibersegurança, automação, IoT e inteligência artificial.</p>
+
+                        <h3>Minha história</h3>
+                        <ol class="timeline">
+                            <li><span class="mono">Início</span><p>Primeiro contato com programação e a curiosidade de entender como tudo funciona.</p></li>
+                            <li><span class="mono">Fatec Campinas</span><p>Ingresso em Análise e Desenvolvimento de Sistemas — base sólida em lógica, C, Java e bancos de dados.</p></li>
+                            <li><span class="mono">Projetos reais</span><p>Site e ferramentas de gestão para uma autoescola, sistema CRM e assistente de voz com IA.</p></li>
+                            <li><span class="mono">Agora</span><p>Aprofundando em estruturas de dados, cibersegurança e integração IA + IoT.</p></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="section section-alt">
+            <div class="container">
+                <header class="section-head reveal">
+                    <span class="mono">02 / skills</span>
+                    <h2>O que eu uso</h2>
+                    <p>Ferramentas e áreas que estudo e aplico nos meus projetos.</p>
+                </header>
+
+                <div class="skills-grid">
+                    <article class="card skill-card reveal">
+                        <i class="fa-solid fa-code card-icon"></i>
+                        <h3>Linguagens</h3>
+                        <ul class="tags"><li>C</li><li>Java</li><li>Python</li><li>JavaScript</li><li>HTML5</li><li>CSS3</li></ul>
+                    </article>
+                    <article class="card skill-card reveal">
+                        <i class="fa-solid fa-layer-group card-icon"></i>
+                        <h3>Web</h3>
+                        <ul class="tags"><li>React</li><li>Node.js</li><li>Bootstrap</li><li>APIs REST</li></ul>
+                    </article>
+                    <article class="card skill-card reveal">
+                        <i class="fa-solid fa-database card-icon"></i>
+                        <h3>Bancos de dados</h3>
+                        <ul class="tags"><li>MySQL</li><li>SQL Server</li><li>MongoDB</li></ul>
+                    </article>
+                    <article class="card skill-card reveal">
+                        <i class="fa-solid fa-screwdriver-wrench card-icon"></i>
+                        <h3>Ferramentas</h3>
+                        <ul class="tags"><li>Git</li><li>GitHub</li><li>VS Code</li><li>Linux</li><li>Docker</li></ul>
+                    </article>
+                    <article class="card skill-card reveal">
+                        <i class="fa-solid fa-shield-halved card-icon"></i>
+                        <h3>Cibersegurança</h3>
+                        <ul class="tags"><li>Redes</li><li>Nmap</li><li>Kali Linux</li><li>Web Security</li></ul>
+                    </article>
+                    <article class="card skill-card reveal">
+                        <i class="fa-solid fa-microchip card-icon"></i>
+                        <h3>IoT &amp; IA</h3>
+                        <ul class="tags"><li>Arduino</li><li>ESP32</li><li>Raspberry Pi</li><li>LLMs</li><li>Speech-to-Text</li></ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJETOS -->
+        <section id="projetos" class="section">
+            <div class="container">
+                <header class="section-head reveal">
+                    <span class="mono">03 / projetos</span>
+                    <h2>Projetos em destaque</h2>
+                    <p>Cada projeto mostra o problema, a solução e o resultado.</p>
+                </header>
+
+                <div class="filters reveal" role="tablist">
+                    <button class="filter active" data-filter="all">Todos</button>
+                    <button class="filter" data-filter="web">Web</button>
+                    <button class="filter" data-filter="sistema">Sistemas</button>
+                    <button class="filter" data-filter="iot">IA &amp; IoT</button>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="card project-card featured reveal" data-cat="web sistema">
+                        <!-- Screenshot do projeto: <img src="./img/autoescola.jpg" alt="Site da autoescola"> -->
+                        <div class="photo-placeholder project-img"><i class="fa-regular fa-image"></i><span>Screenshot do projeto<br><small>16:9 · 1600×900px</small></span></div>
+                        <div class="project-body">
+                            <span class="mono">Web · Gestão</span>
+                            <h3>Autoescola — Site &amp; Gestão</h3>
+                            <p>Site responsivo e ferramentas internas para organizar alunos, exames, veículos e categorias, com planilhas automatizadas.</p>
+                            <div class="insight"><i class="fa-solid fa-lightbulb"></i> <span><strong>Insight:</strong> automatizar planilhas reduziu tarefas manuais repetitivas da equipe.</span></div>
+                            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Excel</li><li>VBA</li></ul>
+                            <div class="project-links">
+                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                                <a href="#"><i class="fa-brands fa-github"></i> Código</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card project-card reveal" data-cat="sistema">
+                        <div class="photo-placeholder project-img"><i class="fa-regular fa-image"></i><span>Screenshot do projeto</span></div>
+                        <div class="project-body">
+                            <span class="mono">Sistema · Banco de dados</span>
+                            <h3>Sistema CRM</h3>
+                            <p>CRM para organizar clientes/pacientes com autenticação, agendamentos e painel administrativo.</p>
+                            <ul class="tags"><li>Python</li><li>SQL</li><li>JavaScript</li></ul>
+                            <div class="project-links">
+                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                                <a href="#"><i class="fa-brands fa-github"></i> Código</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card project-card reveal" data-cat="iot">
+                        <div class="photo-placeholder project-img"><i class="fa-regular fa-image"></i><span>Foto do protótipo</span></div>
+                        <div class="project-body">
+                            <span class="mono">IA · IoT</span>
+                            <h3>Assistente de Voz com IA</h3>
+                            <p>Assistente modular: ESP32/Raspberry capta a voz, um servidor faz Speech-to-Text + LLM e aciona dispositivos físicos.</p>
+                            <ul class="tags"><li>ESP32</li><li>Python</li><li>LLM</li><li>IoT</li></ul>
+                            <div class="project-links">
+                                <a href="#"><i class="fa-brands fa-github"></i> Código</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card project-card reveal" data-cat="web">
+                        <div class="photo-placeholder project-img"><i class="fa-regular fa-image"></i><span>Screenshot do projeto</span></div>
+                        <div class="project-body">
+                            <span class="mono">Web</span>
+                            <h3>Projetos Web</h3>
+                            <p>Interfaces responsivas, APIs, back-end, autenticação e deploy — projetos para evoluir arquitetura front e back.</p>
+                            <ul class="tags"><li>React</li><li>Node.js</li><li>APIs</li></ul>
+                            <div class="project-links">
+                                <a href="https://github.com/FelipeRobinson" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Ver no GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section id="contato" class="section section-alt">
+            <div class="container contact-grid">
+                <div class="reveal">
+                    <span class="mono">04 / contato</span>
+                    <h2>Vamos construir algo juntos?</h2>
+                    <p class="lead">Estou aberto a oportunidades de estágio, freelas e colaborações. Respondo rápido!</p>
+                    <ul class="contact-list">
+                        <li><i class="fa-solid fa-envelope"></i><a href="mailto:feliperobinsonprofissional@gmail.com">feliperobinsonprofissional@gmail.com</a></li>
+                        <li><i class="fa-brands fa-linkedin-in"></i><a href="https://linkedin.com/in/FelipeRobinson" target="_blank" rel="noopener">linkedin.com/in/FelipeRobinson</a></li>
+                        <li><i class="fa-brands fa-github"></i><a href="https://github.com/FelipeRobinson" target="_blank" rel="noopener">github.com/FelipeRobinson</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i><span>Campinas, SP — Brasil</span></li>
+                    </ul>
+                </div>
+
+                <form class="card contact-form reveal" id="contact-form">
+                    <label>Nome<input type="text" name="nome" required placeholder="Seu nome"></label>
+                    <label>Email<input type="email" name="email" required placeholder="voce@email.com"></label>
+                    <label>Mensagem<textarea name="mensagem" rows="5" required placeholder="Conte sobre seu projeto ou oportunidade"></textarea></label>
+                    <button type="submit" class="btn btn-primary">Enviar mensagem <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year">2026</span> Felipe Robinson. Todos os direitos reservados.</p>
+            <a href="#home" class="back-top" aria-label="Voltar ao topo"><i class="fa-solid fa-arrow-up"></i></a>
         </div>
-    </section>
-
-    <section id="contato">
-        <h1>Contato</h1>
-    </section>
-
-    <section id="projetos">
-        <h1>Projetos</h1>
-    </section>
-
-    <section id="skills">
-        <h1>Skills</h1>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Felipe Robinson. Todos os direitos reservados.</p>
     </footer>
 
     <script src="./js/script.js"></script>

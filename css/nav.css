@@ -4,14 +4,23 @@
     top: 0;
     z-index: 100;
     background-color: var(--primary-color);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent;
+    transition: border-color .3s;
 }
+.header.scrolled { border-bottom-color: var(--border); }
+
+.logo { text-decoration: none; }
+.logo-text { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; color: var(--text); }
 
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 15px 40px;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 16px 16px;
 }
 
 .logo img {
@@ -29,14 +38,14 @@
 
 .nav-links a {
     text-decoration: none;
-    color: var(--secondary-color);
+    color: var(--muted);
     font-weight: 500;
     transition: color 0.2s;
 }
 
-.nav-links a:hover {
-    color: rgba(255, 0, 0, 0.5);
-}
+.nav-links a:hover, .nav-links a.current { color: var(--text); }
+.nav-links a.nav-cta { padding: 8px 18px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); }
+.nav-links a.nav-cta:hover { background: var(--accent); color: #fff; }
 
 /* BOTÃO HAMBÚRGUER */
 .menu-toggle {
@@ -85,7 +94,7 @@
 /* RESPONSIVO */
 @media (max-width: 768px) {
     .navbar {
-        padding: 15px 20px;
+        padding: 14px 16px;
     }
 
     .menu-toggle {
@@ -102,7 +111,7 @@
         flex-direction: column;
         justify-content: space-between;
         padding: 100px 20px 40px;
-        background-color: var(--primary-color);
+        background-color: var(--bg);
         transform: translateX(-100%);
         visibility: hidden;
         transition: transform 0.4s ease, visibility 0.4s;
